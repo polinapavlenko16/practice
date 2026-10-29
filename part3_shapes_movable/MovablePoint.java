@@ -10,13 +10,28 @@ public class MovablePoint implements Movable {
         this.ySpeed = ySpeed;
     }
 
-    @Override public void moveUp() { y += ySpeed; }
-    @Override public void moveDown() { y -= ySpeed; }
-    @Override public void moveLeft() { x -= xSpeed; }
-    @Override public void moveRight() { x += xSpeed; }
+    @Override 
+    public void moveUp() { 
+        y += ySpeed; // Движение вверх (увеличение координаты Y)
+    }
+    
+    @Override 
+    public void moveDown() { 
+        y -= ySpeed; // Движение вниз (уменьшение координаты Y)
+    }
+    
+    @Override 
+    public void moveLeft() { 
+        x -= xSpeed; 
+    }
+    
+    @Override 
+    public void moveRight() { 
+        x += xSpeed; 
+    }
 
     @Override
     public String toString() {
-        return "(" + x + ", " + y + ")";
+        return "(" + x + ", " + y + ") speed=(" + xSpeed + ", " + ySpeed + ")";
     }
 }
